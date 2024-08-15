@@ -1,0 +1,14 @@
+<div class="text-center">
+    <h2 mat-dialog-title>Agregar Tarea</h2>
+    <mat-dialog-content [formGroup]="form">
+      <mat-form-field>
+        <mat-label>Tarea</mat-label>
+        <input matInput  formControlName="tarea"/>
+        <mat-error *ngIf="form.controls.tarea.invalid && form.controls.tarea.touched">Campo Obligatorio</mat-error>
+      </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions class="d-flex justify-content-center">
+      <button mat-button (click)="cerrar()">Cerrar</button>
+      <button mat-button color="primary" (click)="agregar()">Agregar</button>
+    </mat-dialog-actions>
+</div>

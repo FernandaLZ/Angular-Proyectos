@@ -1,0 +1,17 @@
+<div class="tw-text-center">
+    <div *ngFor="let row of triangle">
+        <div class="tw-flex tw-justify-center tw-justify-items-center">
+          <span *ngFor="let value of row.values" class="tw-flex tw-justify-center tw-px-2 tw-w-[10px] tw-text-black" [ngStyle]="{'background-color': row.color,'opacity': '0.5'}">
+            {{ value }}
+          </span>
+        </div>
+    </div>
+    <div *ngFor="let row of triangle.reverse()">
+        <div class="tw-flex tw-justify-center tw-justify-items-center">
+          <span *ngFor="let value of row.values" class="tw-flex tw-justify-center tw-px-2 tw-w-[10px] tw-text-black" [ngStyle]="{'background-color': row.color,'opacity': '0.5'}">
+            {{ value }}
+          </span>
+        </div>
+    </div>
+</div>
+
